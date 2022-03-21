@@ -1,0 +1,26 @@
+#주피터 정리
+!!임포트:
+import pandas as pd: 데이터 프레임 쓸 때 필요한 모듈
+import numpy as np : n 차원 행렬 자료 구조를 지원
+import seaborn as sns:데이터 시각화를 담당하는 모듈
+
+from matplotlib import rc, font_manager
+import matplotlib.font_manager as fm
+# 디렉토리 및 파일 이름에 맞추어 변경
+font_location = 'C:/Windows/Fonts/malgun.ttf'#윈도우안에있는 폰트파일주소.
+#font_location = '../NanumGothic.ttf'
+font_name = fm.FontProperties(fname=font_location).get_name()
+rc('font', family=font_name)
+:한글 파일 임포트
+
+1. csv파일을 읽어올때
+pd(변수명) = pd.read_csv('csv파일주소')
+
+2.시본 데이터 셈플 가져올 때
+anscombe(변수명) = sns.load_dataset('iris')
+
+3.행렬 개수 구하기
+df.shape
+
+4. 해당 컬럼값들의 중복값과 빈도수 채크
+df['컬럼명'].value_counts()
