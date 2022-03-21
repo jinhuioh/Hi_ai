@@ -1,0 +1,41 @@
+import requests
+
+header_data= {
+    'accept': 'application/json',
+    'Authorization': 'VXgWV/f5wELzapZjJF7FEqqtFhPbNA8KBIWia3SXOCvY+CXEUok1DhybfbP4USE/g2b/QYT62C2mw3zcSWj2pg==',
+}
+
+param_data = (
+    ('page', '1'),
+    ('perPage', '10'),
+    ('serviceKey', 'VXgWV/f5wELzapZjJF7FEqqtFhPbNA8KBIWia3SXOCvY+CXEUok1DhybfbP4USE/g2b/QYT62C2mw3zcSWj2pg=='),
+)
+
+url = 'https://api.odcloud.kr/api/15069309/v1/uddi:973ad0df-617a-4565-8e82-8ea7869e75d4'
+## decode key가 적용되었음.
+## api마다 연결이 되지 않는다고 한다면, encode, decode를 바꾸어 테스트해볼 것.
+response = requests.get(url, headers=header_data, params=param_data)
+response
+
+json_data = response.json()#데이터탐색EDA:키가 몇개 있고 어던 내용인지 등 데이터를 보는거
+json_data
+
+import pickle #pickle은 파일을 저장할 목적으로 사용. 문서의 부가적인 정보까지(json성질,xml성질 등)저장. 서버에 파일 올려놓고 싶을 때.
+
+with open('covid-gokr.json','wb') as fp:#지금사용하고 있는 작업폴더 위치에 파일 생성.
+    pickle.dump(json_data,fp)
+#w인데bite로 저장해야해서 wb라고 써야함.
+
+#아래랑 같은 코드
+#file.open('covid-gokr.json','wb'):
+#file.close
+
+with open('covid-gokr.json','rb') as fp:
+    json_read_data=pickle.load(fp)#일반 텍스트 파일이 아닐때는 rb라고 b를 붙여준다.
+
+type(json_read_data)#딕셔너리 타입이다.
+
+json_read_data
+
+json_data
+
