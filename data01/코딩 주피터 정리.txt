@@ -72,4 +72,6 @@ regplot의 fit_reg=True이용
 
 import seaborn as sns
 
+11. fx가 타입이 array이면 5개의 값만 꺼내는 방법:
+fx[:5]
 
