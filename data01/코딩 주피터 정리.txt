@@ -75,3 +75,36 @@ import seaborn as sns
 11. fx가 타입이 array이면 5개의 값만 꺼내는 방법:
 fx[:5]
 
+12.리네임하는방법
+df.rename(columns={cctv_seoul.columns[0]:'구별'},inplace=True)
+
+13.#머지 함수를 사용해서 데이터프레임 합치기
+data_result = pd.merge(cctv_seoul,pop_seoul,on='구별')
+data_result.head()
+
+14.정렬
+cctv_seoul.sort_values(by='최근증가율',ascending=False).head()
+
+15.
+#산점도그리기
+plt.scatter(data_result["인구수"],data_result['소계'], s=50, c='pink')#s는 점의 크기
+plt.text(400000, 2500,'야야야')
+
+16.heatmap그리기
+dr_corr = data_result.corr()
+dr_corr
+cols = data_result.columns
+
+sns.heatmap(dr_corr.values,
+            cbar = True,
+            annot= True,
+            square=True, 
+            fmt = '.2f',
+            xticklabels=cols,
+            yticklabels=cols
+           )
+15.
+cctv_seoul['최근증가율'] = (cctv_seoul['2014년'] + cctv_seoul['2015년']
+                       + cctv_seoul['2016년'])/ cctv_seoul['2013년도 이전']*100
+cctv_seoul.head()
+
