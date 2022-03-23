@@ -108,3 +108,21 @@ cctv_seoul['최근증가율'] = (cctv_seoul['2014년'] + cctv_seoul['2015년']
                        + cctv_seoul['2016년'])/ cctv_seoul['2013년도 이전']*100
 cctv_seoul.head()
 
+16.null값인 행들의 개수
+print(df.isnull().sum())
+
+17.
+# 전체 평균보다 많은 알코올을 섭취하는 대륙을 구합니다.
+total_mean = df.total_litres_of_pure_alcohol.mean()
+continent_mean = df.groupby('continent')['total_litres_of_pure_alcohol'].mean()
+continent_over_mean = continent_mean[continent_mean >= total_mean]
+print(continent_over_mean)
+
+18.idxmax():최대값을 가지는 인덱스 레이블을 출력한다.
+# 평균 beer_servings이 가장 높은 대륙을 구합니다.gs.
+beer_continent = df.groupby('continent').beer_servings.mean().idxmax()
+beer_continent
+
+19.range 함수와 np.arange함수의 차이점
+range: 정수 단위만 지원 range interator자료형 반환
+np.arange: 실수 단위도 표현 가능 numpy array자료형을 반환
