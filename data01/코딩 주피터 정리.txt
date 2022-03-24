@@ -142,3 +142,5 @@ np.arange: 실수 단위도 표현 가능 numpy array자료형을 반환
 #최근증가율과 소계의 상관관계
 dr_corr = data_result.corr()
 dr_corr
+
+train_target.count()#시리즈는 카운트함수 사용가능
