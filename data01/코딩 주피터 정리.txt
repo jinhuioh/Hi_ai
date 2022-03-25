@@ -1,6 +1,12 @@
 #주피터 정리
 
-EDA:데이터시각화
+EDA:데이터살펴보는 단계. 데이터 탐색. 탐구데이터분석
+       통계치(합계,최대치,그룹묶어서 평균 등)
+EDA : 전략적 데이터 탐구, info(), describe(), group, feature range, visualization~~
+
+ETL:내가 원하는 데이터를 추출하고, 변화시키고, 로딩
+ETL: Extract, Transform, Load
+
 
 import warnings
 warnings.filterwarnings(action='ignore')#임포트 해주면
