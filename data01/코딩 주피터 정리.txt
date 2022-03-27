@@ -150,3 +150,14 @@ dr_corr = data_result.corr()
 dr_corr
 
 train_target.count()#시리즈는 카운트함수 사용가능
+
+######################################3333
+머신러닝,딥러닝:
+
+from sklearn.neighbors import KNeighborsClassifier
+:최근접 이웃 알고리즘을 구현한 클래스, 가장 가까운 이웃을 참고하여 정답을 
+예측하는 알고리즘이 구현된 사이킷런 클래스
+
+fit(): 훈련시킬땨 쓰는 함수
+socre(): 훈련이 잘 되었는지 평가하는 함수(높을수록 정확도가 높다.)
+predict(): 사이킷런 모델을 훈련하고 예측할 때 사용하는 메서드
