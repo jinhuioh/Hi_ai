@@ -171,3 +171,20 @@ from sklearn.neighbors import KNeighborsClassifier
 fit(): 훈련시킬땨 쓰는 함수
 socre(): 훈련이 잘 되었는지 평가하는 함수(높을수록 정확도가 높다.)
 predict(): 사이킷런 모델을 훈련하고 예측할 때 사용하는 메서드
+
+isdecimal()함수:
+for like in like_texts:
+        if like.text.isdecimal():#이즈데시말: 문자인지 숫자인지 판단.
+            print(int(like.text))#숫자를 인트값으로 바꿔줘
+        else:
+            pass
+
+getText함수
+addr = <td>서울시 강남구 영동대로 607 1,2층  <!--span class="lot">(서울시 강남구 영동대로 607 1,2층)</span--></td>
+print(addr.getText())#getText함수를 사용해서 text만 추출
+결과:서울시 강남구 영동대로 607 1,2층  
+
+string함수
+tel = <td>02-3443-5618</td>
+print(tel.string)
+결과: 02-3443-5618
