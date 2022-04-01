@@ -188,3 +188,7 @@ string함수
 tel = <td>02-3443-5618</td>
 print(tel.string)
 결과: 02-3443-5618
+
+
+#argmax:리스트값중 최대값을 가지는 인덱스를 가져다 줌
+max_index = np.argmax(acc_total)
