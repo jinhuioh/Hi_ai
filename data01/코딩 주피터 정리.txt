@@ -7,6 +7,19 @@ EDA : 전략적 데이터 탐구, info(), describe(), group, feature range, visu
 ETL:내가 원하는 데이터를 추출하고, 변화시키고, 로딩
 ETL: Extract, Transform, Load
 
+*ml,dl
+<cross== grid == matrix: 표로 정리되는 형태>
+grid search: 선정된 모델의 최적의 파라메터를 찾을 때 , 최적화된 하이퍼파라메터를 찾아주는 메서드
+cross-validation(교차검증): 최적의 모델을찾기위해 셈플링을 다양하게 하는 것
+kfold: cross-validation의 방법중 하나.
+confusion matrix: acc의 자세한 내용까지 확인하고 싶을 때,(accuracy) 
+	          정확하게 얼마나 맞추었는지, 맞추지 못했는지 확인
+                        예) 실제값을 가지고 예측할 때 암환자가 700명인데 500명만
+                        암환자라고 예측했을때 200명의 혼란스러운 값이 생기는 것.
+
+scaling: minMax: 
+1)최대최소값을 기준으로 표현, 
+2)standard: 평균을 기준으로 판단
 
 import warnings
 warnings.filterwarnings(action='ignore')#임포트 해주면
